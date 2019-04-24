@@ -1,7 +1,7 @@
 QT += core
 QT -= gui
 
-TARGET = Projet_Tpe
+TARGET = Snifffer
 CONFIG += console
 CONFIG -= app_bundle
 
