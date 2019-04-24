@@ -14,8 +14,8 @@ QMAKE_CXXFLAGS += -std=c++11
 
 unix:!macx: LIBS += -L$$_PRO_FILE_PWD_/libtins/lib/linux -ltins
 
-INCLUDEPATH += $$PWD/../../Bureau/Informatique/Programmation/Librairie/libtins/libtins_64bits/include
-DEPENDPATH += $$PWD/../../Bureau/Informatique/Programmation/Librairie/libtins/libtins_64bits/include
+INCLUDEPATH += $$_PRO_FILE_PWD_/libtins/include
+DEPENDPATH += $$_PRO_FILE_PWD_/libtins/include
 
 unix:!macx: LIBS += -L$$_PRO_FILE_PWD_/boost/lib/linux/ -lboost_regex
 
