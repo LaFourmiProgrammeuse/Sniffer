@@ -19,5 +19,5 @@ DEPENDPATH += $$_PRO_FILE_PWD_/libtins/include
 
 unix:!macx: LIBS += -L$$_PRO_FILE_PWD_/boost/lib/linux/ -lboost_regex
 
-INCLUDEPATH += $$PWD/'_PRO_FILE_PWD_/boost/include'
-DEPENDPATH += $$PWD/'_PRO_FILE_PWD_/boost/include'
+INCLUDEPATH += '$$_PRO_FILE_PWD_/boost/include'
+DEPENDPATH += '$$_PRO_FILE_PWD_/boost/include'

@@ -2,8 +2,10 @@
 #include <iostream>
 #include <QDebug>
 #include <tins/tins.h>
-#include <boost/regex/v4/regex.hpp>
 #include <tins/crypto.h>
+#include <boost/include/boost/regex/v4/regex.hpp>
+#include <boost/include/boost/regex/v4/basic_regex.hpp>
+
 #include <sstream>
 #include <QFile>
 #include <QDateTime>
@@ -33,7 +35,7 @@ bool callback(const Tins::PDU &pdu){
 
             const Tins::RawPDU::payload_type & payload = raw->payload();
 
-            if(payload.size() == 0){
+            /*if(payload.size() == 0){
                 std::cout << "No payload..." << std::endl;
             }
             else{
@@ -63,7 +65,7 @@ bool callback(const Tins::PDU &pdu){
 
             //On s'occupe ici des informations reçus
             //On recupere les cookies si il y en a
-            boost::regex regex_cookie("Cookie:( (\\w|;|=)*)*");
+            boost::basic_regex regex_cookie("Cookie:( (\\w|;|=)*)*");
             boost::match_results<Tins::RawPDU::payload_type::const_iterator> match_results;
             bool ismatched = boost::regex_search(payload.begin(), payload.end(), match_results, regex_cookie);
 
@@ -126,7 +128,7 @@ bool callback(const Tins::PDU &pdu){
                         }
                     }
                 }
-            }
+            }*/
         }
     }
 
